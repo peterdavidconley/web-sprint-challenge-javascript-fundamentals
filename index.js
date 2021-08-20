@@ -28,16 +28,12 @@ myFunction();
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
 function summation(number) {
-  const count = 0
-  for (let i = 1 ; i < number; i++) {
-    number = count + i
+  let count = 0
+  for (let i = 1 ; i <= number; i++) {
+    count += i
   }
-  return count + number
-  }
-
-  //console.log(summation(4))
-  
- 
+  return count 
+  }  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -126,26 +122,27 @@ const zooAnimals = [
     return cb(a,b)
   }
  
+
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
 function add(consumeCB){
-    return consumeCB()
+    return a + b;
   }
 
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
   
-function multiply(/*Your Code Here */){
+function multiply(consumeCB){
    /*Your Code Here */
   }
 
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
   
-function greeting(/*Your Code Here */){
-   return /*Your Code Here */
+function greeting(first, last){
+   return `Hello ${first} ${last}, nice to meet you!`
   }
   
   
