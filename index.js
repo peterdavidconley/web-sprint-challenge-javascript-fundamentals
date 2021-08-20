@@ -5,11 +5,11 @@ Study the code below and explain in your own words why nested function can acces
 const external = "I'm outside the function";
 
 function myFunction() {
-  console.log(external);
+  //console.log(external);
   const internal = "Hello! I'm inside myFunction!";
 
   function nestedFunction() {
-    console.log(internal);
+    //console.log(internal);
   }
   nestedFunction();
 }
@@ -35,8 +35,8 @@ function summation(number) {
   return count + number
   }
 
-  console.log(summation(4))
-  console.log(summation(8))
+  //console.log(summation(4))
+  
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -64,7 +64,7 @@ const zooAnimals = [
   function animalNames(array){
     const newArray = []
     array.forEach(function(item)
-      {newArray.push(item.animal_name)
+      {newArray.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`)
       }
     )
     return newArray
