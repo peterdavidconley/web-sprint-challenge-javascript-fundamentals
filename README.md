@@ -26,13 +26,41 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+.map is a method used on an array to create a new array, with all items in the array altered in some way. For example if you have an array of numbers like [1,2,3,4,5] but want to multiply all the values by 2 you can use the .map method to convert that array to [2,4,6,8,10].
+
+.reduce is a method used on arrays that returns a result, typically an answer from an addition or multiplication computation. Let's say you have an array that holds the populations of individual cities but you want the total population amount, .reduce would be a great use case to get that single value. 
+
+.filter is a method used on an array to create a new array that is smaller and filters out certain items by a set condition. A use case for this method would be wanting to create a new array that only has certain items. Let's say you have an array of cities but you only want to see which ones have a population greater than 1 million residents, .filter would be a great way to create that new array of large cities. 
+
 2. Explain the difference between a callback and a higher order function.
+
+A callback function gets passed through a higher order function as an argument. A higher order function is the one that receives the callback as their argument. 
 
 3. Explain what a closure is.
 
+Closure is when an inner function reaches outside of it's scope to access another function or variable. 
+
 4. Describe the four principles of the 'this' keyword.
 
+A. global/window
+
+When used in the global scope the 'this' keyword will refer to the window object.
+
+B. Implicit
+
+When creating a method as an objects key the 'this' keyword is used to reference that specific object
+
+C. Explicit
+
+Explicit use of the keyword 'this' is used when creating new functions using methods like .call or .bind
+
+D. New
+
+When creating a constructor function you use the 'this' keyword to refer to the new object that has yet to be made. 
+
 5. Why do we need super() in an extended class?
+
+You need super() to inherit the attributes of the Parent class, it replaces the .call method. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
