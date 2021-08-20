@@ -28,16 +28,15 @@ myFunction();
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
 function summation(number) {
-
-  for (let i = 1 ; i <= number; i++) {
-  return number += number + i
+  const count = 0
+  for (let i = 1 ; i < number; i++) {
+    number = count + i
+  }
+  return count + number
   }
 
-  }
-
-  console.log(summation(7))
-  console.log(summation(10))
-  console.log(summation(3))
+  console.log(summation(4))
+  console.log(summation(8))
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -63,14 +62,16 @@ const zooAnimals = [
   */
 
   function animalNames(array){
-    newArray = []
+    const newArray = []
     array.forEach(function(item)
-      {newArray.push(item.animal_name, item.scientific_name)}
+      {newArray.push(item.animal_name)
+      }
     )
     return newArray
 
   }
   
+  console.log(animalNames(zooAnimals))
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -80,20 +81,22 @@ const zooAnimals = [
 
   function lowerCaseNames(array){
     const lowerCase = array.map(function(item){
-      item.animal_name.toLowerCase()
+      return item.animal_name.toLowerCase()
     }
     )
     return lowerCase
   }
-  
-  
+    
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    
+  function lowPopulationAnimals(array){
+    const lowPop = array.filter(function(item){
+      return item.population < 5
+    })
+    return lowPop
   }
   
 
@@ -221,8 +224,8 @@ const cuboidTwo = new CuboidMakerTwo({length: 4, width: 5, height: 5})
 
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
-console.log(cuboidTwo.volume()); // 100
-console.log(cuboidTwo.surfaceArea()); // 130
+//console.log(cuboidTwo.volume()); // 100
+//console.log(cuboidTwo.surfaceArea()); // 130
 
 
 
